@@ -9,7 +9,6 @@ export const readEvents = () => async (dispatch) => {
   // 非同期処理
   // Promiseで返る
   const response = await axios.get(`${ROOT_URL}/events${QUERYSTRING}`)
-  console.log(response)
 
   // responseも返す
   dispatch({ type: READ_EVENTS, response})
